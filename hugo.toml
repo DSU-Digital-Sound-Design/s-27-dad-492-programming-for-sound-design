@@ -1,0 +1,120 @@
+baseURL = "https://dsu-digital-sound-design.github.io/s-27-dad-492-programming-for-sound-design/"
+languageCode = "en-us"
+title = "DAD 492: Programming for Sound Design"
+enableRobotsTXT = true
+
+# Console renders the course pages; reveal-hugo renders the lecture decks.
+# Order matters: Console is listed first so its templates win for HTML output,
+# while reveal-hugo's *.reveal.html templates win for the Reveal output format.
+theme = ["t-console-theme", "reveal-hugo"]
+
+[outputFormats.Reveal]
+  baseName = "index"
+  mediaType = "text/html"
+  isHTML = true
+
+[params]
+  accent = "#5fe0b0"
+  description = "Design and build your own audio plugins with plugdata: the standard effects every producer uses, and several of your own invention."
+
+  [params.reveal_hugo]
+  custom_theme = "reveal-console.css"
+  transition = "fade"
+  slide_number = true
+
+  [params.course]
+    code = "DAD 492"
+    title = "Programming for Sound Design"
+    term = "Spring 2027"
+    meeting = "MWF · time TBA"
+    instructor = "Tate Carson"
+    final = "Finals week, May 3–7 · exact time TBA"
+
+  [params.schedule]
+    # Monday of week 1. DSU Spring 2027 classes begin Jan 11.
+    start = "2027-01-11"
+    filterPlaceholder = 'filter — try "delay" or "due"'
+
+    # This course's own tag vocabulary. Setting this REPLACES the defaults,
+    # so every tag the schedule uses has to be listed here.
+    [[params.schedule.tags]]
+      id = "slides"
+      label = "Lectures"
+      color = "#5fe0b0"
+    [[params.schedule.tags]]
+      id = "lab"
+      label = "Builds"
+      color = "#b6ff5c"
+    [[params.schedule.tags]]
+      id = "reading"
+      label = "Readings"
+      color = "#c58cff"
+    [[params.schedule.tags]]
+      id = "watch"
+      label = "Videos"
+      color = "#6ec1ff"
+    [[params.schedule.tags]]
+      id = "project"
+      label = "Projects"
+      color = "#ffd166"
+    [[params.schedule.tags]]
+      id = "due"
+      label = "Due"
+      color = "#ff8a5c"
+    [[params.schedule.tags]]
+      id = "off"
+      label = "No class"
+      color = "#7d8a7a"
+      skip = true
+
+  [[params.facts]]
+    key = "Meets"
+    value = "MWF · time TBA"
+  [[params.facts]]
+    key = "Room"
+    value = "See D2L"
+  [[params.facts]]
+    key = "Instructor"
+    value = "Tate Carson"
+  [[params.facts]]
+    key = "Credits"
+    value = "3"
+  [[params.facts]]
+    key = "Prerequisites"
+    value = "None. No coding or DSP experience expected."
+  [[params.facts]]
+    key = "Software"
+    value = "plugdata (with the Heavy toolchain), REAPER"
+  [[params.facts]]
+    key = "Grading"
+    value = "Participation 20% · Plugin builds 30% · Projects 30% · Final 20%"
+
+[[menus.main]]
+  name = "schedule"
+  pageRef = "/schedule"
+  weight = 10
+[[menus.main]]
+  name = "projects"
+  pageRef = "/assignments"
+  weight = 20
+[[menus.main]]
+  name = "lectures"
+  pageRef = "/lectures"
+  weight = 30
+[[menus.main]]
+  name = "syllabus"
+  pageRef = "/syllabus"
+  weight = 40
+[[menus.main]]
+  name = "resources"
+  pageRef = "/resources"
+  weight = 50
+
+[markup.goldmark.renderer]
+  # Lecture decks contain raw HTML (iframes, audio embeds).
+  unsafe = true
+
+[markup.tableOfContents]
+  ordered = false
+  startLevel = 1
+  endLevel = 2

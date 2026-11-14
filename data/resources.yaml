@@ -1,0 +1,72 @@
+groups:
+  - group: Software
+    items:
+      - name: plugdata
+        url: "https://plugdata.org/download.html"
+        desc: "The environment we build everything in. Install the plugin version as well as the standalone app."
+      - name: REAPER
+        url: "https://www.reaper.fm/"
+        desc: "The DAW we test plugins in. Free 60-day evaluation."
+      - name: plugdata documentation
+        url: "https://plugdata.org/documentation.html"
+        desc: "Links to the official docs, the object reference, and the Pure Data documentation."
+      - name: Pure Data documentation
+        url: "https://puredata.info/docs"
+        desc: "Most of what's written about Pure Data also applies to plugdata."
+
+  - group: Exporting plugins (Heavy)
+    items:
+      - name: Heavy compiler (hvcc) documentation
+        url: "https://wasted-audio.github.io/hvcc/latest/"
+        desc: "The compiler plugdata uses to turn a patch into a standalone plugin."
+      - name: Patching for Heavy
+        url: "https://wasted-audio.github.io/hvcc/latest/getting-started/patching/"
+        desc: "How to expose parameters with [r name @hv_param min max default], plus rules for exportable patches."
+      - name: Supported objects
+        url: "https://wasted-audio.github.io/hvcc/latest/reference/objects/supported/"
+        desc: "Check here before you build. Objects not on this list won't export, and the ELSE library is not supported."
+      - name: Audio plugin (DPF) export
+        url: "https://wasted-audio.github.io/hvcc/latest/generators/dpf/"
+        desc: "Plugin formats, MIDI input, and DAW tempo with [r __hv_dpf_bpm]."
+
+  - group: Reading
+    items:
+      - name: "Puckette, Theory and Technique of Electronic Music"
+        url: "https://msp.ucsd.edu/techniques.htm"
+        desc: "The main text, free online, by the creator of Pure Data. Each chapter comes with example patches."
+      - name: "Kreidler, Loadbang: Programming Electronic Music in Pd"
+        url: "http://www.pd-tutorial.com/english/index.html"
+        desc: "A gentle, free introduction to programming in Pd. Start here if patching feels unfamiliar."
+      - name: Live Electronics Tutorial (Porres)
+        url: "https://github.com/porres/Live-Electronic-Music-Tutorial"
+        desc: "Hands-on example patches. Already on your computer: it ships inside the ELSE library that plugdata includes."
+      - name: "Farnell, Designing Sound"
+        url: "https://mitpress.mit.edu/9780262014410/designing-sound/"
+        desc: "Sound design from first principles, with every practical in Pd. Optional."
+      - name: Audio EQ Cookbook
+        url: "https://www.w3.org/TR/audio-eq-cookbook/"
+        desc: "The filter formulas behind [biquad~] EQs."
+      - name: "Let's Write a Reverb (Signalsmith Audio)"
+        url: "https://signalsmith-audio.co.uk/writing/2021/lets-write-a-reverb/"
+        desc: "A clear, illustrated walk through building a reverb."
+      - name: Julius O. Smith's online books
+        url: "https://ccrma.stanford.edu/~jos/"
+        desc: "Deep reference on filters and delay-based effects, for when you want the math."
+
+  - group: Video
+    items:
+      - name: Sound Codex plugdata tutorials
+        url: "https://youtube.com/playlist?list=PLZYD2Edyty0BfJ1RAH2heamjJGVj0TEau"
+        desc: "The playlist the plugdata site recommends for getting started."
+      - name: Andrew R. Brown, Pure Data tutorials
+        url: "https://www.youtube.com/@AndrewRBrown"
+        desc: "A long, numbered beginner series in Pd vanilla. Almost all of it works in plugdata."
+      - name: Simon Hutchinson
+        url: "https://www.youtube.com/@simonhutchinson"
+        desc: "Short Pd patch-from-scratch videos on synthesis and effects."
+
+  - group: Community
+    items:
+      - name: plugdata on GitHub
+        url: "https://github.com/plugdata-team/plugdata"
+        desc: "Releases, issues, and source."
